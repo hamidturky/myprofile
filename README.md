@@ -1,11 +1,26 @@
-<div align="center">
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+# Elevate - Professional AI-Powered Portfolio
 
-  <h1>Built with AI Studio</h2>
+A world-class digital profile for **Hamid Idris Mussa**, Information Security Architect.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🛡️ Resilience & Fault Tolerance
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+This application is engineered to stay online even under degraded conditions:
 
-</div>
+- **Global Error Boundary**: Captures runtime crashes and offers a "System Repair" utility to clear corrupt local state.
+- **Service Retries**: CMS and AI service calls implement exponential backoff to handle transient network failures.
+- **Hardened Fallback**: If headless CMS endpoints are unreachable, the app automatically engages a pre-compiled, high-quality data set.
+- **Health Monitoring**: Real-time connection status in the footer keeps the user informed of service health.
+- **Sanitized Errors**: UI-facing error messages are cleaned of technical jargon to maintain a premium brand image while providing actionable feedback.
+
+## 🚀 Core Features
+
+- **Headless CMS Ready**: Async data layer with hardened local fallback.
+- **AI Recruiter**: Gemini-powered assistant with context-aware logic.
+- **Dynamic Localization**: Full English and Arabic (RTL) support.
+- **Secure Architecture**: Designed with information security best practices in mind.
+
+---
+
+**Designed & Developed by Hamid Idris Mussa**
+*Architected for peak security performance.*

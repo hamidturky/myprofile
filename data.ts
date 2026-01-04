@@ -9,7 +9,7 @@ export const globalData: GlobalData = {
     github: "https://github.com/hamidturky", 
     twitter: "https://x.com/Hamid_idturky",
     telegram: "https://t.me/hamid_turky", 
-    whatsapp: "https://wa.me/0097433428890" 
+    whatsapp: "https://wa.me/97433428890" 
   },
   content: {
     en: {

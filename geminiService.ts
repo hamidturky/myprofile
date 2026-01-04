@@ -1,18 +1,21 @@
+
 import { GoogleGenAI } from "@google/genai";
 import { globalData } from "./data";
 import { Language } from "./types";
 
 export const getAIAssistance = async (query: string, lang: Language = 'en') => {
-  if (!process.env.API_KEY) {
-    console.error("Critical: Gemini API Key missing.");
+  // Check if we are in a browser environment without a backend-injected API key
+  const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : null;
+
+  if (!apiKey) {
+    console.error("Gemini API Key missing. This is expected on static hosts like GitHub Pages unless configured with a proxy.");
     return lang === 'en' 
-      ? "AI Assistant is currently offline due to configuration error. Please contact Hamid directly."
-      : "مساعد الذكاء الاصطناعي غير متصل حالياً بسبب خطأ في التكوين. يرجى التواصل مع حامد مباشرة.";
+      ? "I'm currently in 'Offline Mode'. To enable my AI capabilities on a public host, an API gateway is required. You can reach Hamid directly via the contact section!"
+      : "أنا حالياً في 'وضع عدم الاتصال'. لتفعيل قدرات الذكاء الاصطناعي على استضافة عامة، يلزم وجود بوابة برمجية. يمكنك التواصل مع حامد مباشرة عبر قسم الاتصال!";
   }
 
   try {
-    // Initializing a new instance right before the call ensures the latest configuration is used.
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey });
     const profile = globalData.content[lang];
     
     const context = `
@@ -27,10 +30,10 @@ export const getAIAssistance = async (query: string, lang: Language = 'en') => {
       
       Rules:
       - Reply in ${lang === 'en' ? 'English' : 'Arabic'}.
+      - Keep responses concise and professional.
       - If you don't know an answer, suggest emailing Hamid at ${globalData.email}.
     `;
 
-    // Using the simplified content string for a single text prompt as per SDK guidelines.
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: query,
@@ -38,23 +41,15 @@ export const getAIAssistance = async (query: string, lang: Language = 'en') => {
         systemInstruction: context,
         temperature: 0.7,
         maxOutputTokens: 500,
-        thinkingConfig: { thinkingBudget: 0 } // Explicitly disable thinking for low-latency response.
       },
     });
 
-    // The result's text is accessed via the .text property.
-    const responseText = response.text;
-    if (!responseText) throw new Error("Empty AI Response");
-
-    return responseText;
+    return response.text;
   } catch (error: any) {
     console.error("Gemini Error:", error);
-    
-    // Graceful error handling for API quotas or service availability.
     if (error.message?.includes("429")) {
       return lang === 'en' ? "System busy. Please try again in a moment." : "النظام مشغول. يرجى المحاولة مرة أخرى بعد قليل.";
     }
-    
     return lang === 'en' 
       ? "I encountered a processing error. Let's try another question."
       : "واجهت خطأ في المعالجة. دعنا نجرب سؤالاً آخر.";

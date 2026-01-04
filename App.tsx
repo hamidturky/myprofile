@@ -122,6 +122,17 @@ const AppContent: React.FC = () => {
     window.print();
   };
 
+  const handleDownloadCV = () => {
+    if (data?.cvUrl) {
+      const link = document.createElement('a');
+      link.href = data.cvUrl;
+      link.download = 'Hamid_Idris_Mussa_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   const labels = {
     en: {
       experience: 'Experience',
@@ -300,8 +311,8 @@ const AppContent: React.FC = () => {
               <button onClick={handlePrint} className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-4 py-2 rounded-full text-xs font-bold transition-all">
                 <Printer size={14} /> {labels.printPreview}
               </button>
-              <button onClick={handleContactSubmit} className="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-full text-xs font-bold transition-all shadow-lg shadow-cyan-500/20">
-                {labels.download}
+              <button onClick={handleDownloadCV} className="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-full text-xs font-bold transition-all shadow-lg shadow-cyan-500/20">
+                <Download size={14} className="mr-2 inline" /> {labels.download}
               </button>
             </div>
           </div>
@@ -337,10 +348,10 @@ const AppContent: React.FC = () => {
                 <Printer size={20} /> {labels.printPreview}
               </button>
               <button 
-                onClick={handleContactSubmit} 
-                className="w-full bg-cyan-600 text-white py-4 rounded-2xl font-bold shadow-xl"
+                onClick={handleDownloadCV} 
+                className="w-full bg-cyan-600 text-white py-4 rounded-2xl font-bold shadow-xl flex items-center justify-center gap-2"
               >
-                {labels.download}
+                <Download size={20} /> {labels.download}
               </button>
               <button 
                 onClick={() => { setLang(lang === 'en' ? 'ar' : 'en'); setIsMobileMenuOpen(false); }} 
@@ -357,7 +368,7 @@ const AppContent: React.FC = () => {
         {/* Hero Section */}
         <section id="home" className={`mb-32 flex flex-col md:flex-row gap-12 items-center scroll-mt-28 ${isRtl ? 'md:flex-row-reverse' : ''}`}>
           <div className={`flex-1 space-y-8 text-center ${isRtl ? 'md:text-right' : 'md:text-left'}`}>
-            <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest no-print">
               <ShieldCheck size={14} /> {labels.openRoles}
             </div>
             <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight leading-tight">
@@ -379,12 +390,16 @@ const AppContent: React.FC = () => {
           </div>
           <div className="w-full md:w-[400px] aspect-[3/4] rounded-[40px] overflow-hidden relative border border-white/10 shadow-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop" 
-              className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700" 
+              src={profile.avatarUrl} 
+              className="object-cover w-full h-full hover:scale-105 transition-all duration-700" 
               alt={profile.name}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop";
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-            <div className="absolute bottom-8 left-8 right-8 p-6 glass rounded-3xl border-white/10">
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60 no-print" />
+            <div className="absolute bottom-8 left-8 right-8 p-6 glass rounded-3xl border-white/10 no-print">
               <p className="text-xl font-bold">{profile.name}</p>
               <p className="text-sm text-cyan-400 font-medium">{profile.title}</p>
             </div>
@@ -434,7 +449,7 @@ const AppContent: React.FC = () => {
               <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 {profile.experience.map(exp => (
                   <div key={exp.id} className={`group relative ${isRtl ? 'pr-8 border-r' : 'pl-8 border-l'} border-white/10 hover:border-cyan-500 transition-all`}>
-                    <div className={`absolute ${isRtl ? '-right-1' : '-left-1'} top-2 w-2 h-2 rounded-full bg-slate-800 group-hover:bg-cyan-500 transition-colors`} />
+                    <div className={`absolute ${isRtl ? '-right-1' : '-left-1'} top-2 w-2 h-2 rounded-full bg-slate-800 group-hover:bg-cyan-500 transition-colors no-print`} />
                     <div className="space-y-2">
                       <p className="text-cyan-400 font-bold text-xs uppercase tracking-widest">{exp.period}</p>
                       <h3 className="text-2xl font-bold">{exp.role}</h3>
@@ -460,7 +475,7 @@ const AppContent: React.FC = () => {
                   >
                     <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative">
                       <img src={cert.imageUrl} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" alt={cert.name} />
-                      <div className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"><Eye className="text-white" /></div>
+                      <div className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity no-print"><Eye className="text-white" /></div>
                     </div>
                     <h3 className="font-bold text-white group-hover:text-cyan-400 transition-colors">{cert.name}</h3>
                     <p className="text-slate-500 text-sm mt-1">{cert.issuer}</p>

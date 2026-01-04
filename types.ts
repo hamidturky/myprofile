@@ -40,6 +40,7 @@ export interface ProfileData {
   title: string;
   bio: string;
   location: string;
+  avatarUrl: string;
   skills: {
     category: string;
     items: string[];
@@ -52,6 +53,7 @@ export interface ProfileData {
 
 export interface GlobalData {
   email: string;
+  cvUrl: string;
   socials: {
     linkedin: string;
     github: string;

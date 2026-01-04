@@ -3,12 +3,13 @@ import { GlobalData } from './types';
 
 export const globalData: GlobalData = {
   email: "haidturkey@outlook.com",
+  cvUrl: "./resume.pdf",
   socials: {
     linkedin: "https://linkedin.com/in/hamid-turky",
     github: "https://github.com/hamidturky", 
-    twitter: "#",
+    twitter: "https://x.com/Hamid_idturky",
     telegram: "https://t.me/hamid_turky", 
-    whatsapp: "https://wa.me/97400000000" 
+    whatsapp: "https://wa.me/0097433428890" 
   },
   content: {
     en: {
@@ -16,6 +17,7 @@ export const globalData: GlobalData = {
       title: "Information Security Architect | IT Systems Specialist",
       bio: "Master's graduate in Computer Systems Information Security from ITMO University. Expert in risk assessment, network security, and incident response with a proven track record in both academic and freelance technical environments.",
       location: "Al Rayyan, Qatar",
+      avatarUrl: "./profile.png",
       skills: [
         { category: "Security", items: ["Network Security", "Vulnerability Assessment", "Risk Analysis", "Web Security", "Incident Response"] },
         { category: "Systems & DevOps", items: ["Linux", "Windows Server", "VMware", "Virtualization", "Docker", "Git"] },
@@ -119,6 +121,7 @@ export const globalData: GlobalData = {
       title: "مهندس معماري لأمن المعلومات | أخصائي نظم تقنية المعلومات",
       bio: "خريج ماجستير في أمن معلومات أنظمة الكمبيوتر من جامعة ITMO. خبير في تقييم المخاطر، أمن الشبكات، والاستجابة للحوادث مع سجل حافل في البيئات الأكاديمية والتقنية المستقلة.",
       location: "الريان، قطر",
+      avatarUrl: "./profile.png",
       skills: [
         { category: "الأمن", items: ["أمن الشبكات", "تقييم الضعف", "تحليل المخاطر", "أمن الويب", "الاستجابة للحوادث"] },
         { category: "الأنظمة و DevOps", items: ["لينكس", "ويندوز سيرفر", "VMware", "الافتراضية", "دوكر", "جيت"] },

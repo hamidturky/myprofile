@@ -43,11 +43,12 @@
         @media print {
             @page {
                 size: A4;
-                margin: 1.5cm;
+                margin: 1cm;
             }
             body {
                 background: white !important;
                 color: black !important;
+                font-size: 11pt !important;
             }
             nav, 
             .no-print, 
@@ -56,7 +57,9 @@
             .qr-modal,
             .fixed,
             .shadow-2xl,
-            .shadow-lg {
+            .shadow-lg,
+            footer,
+            #contact form {
                 display: none !important;
             }
             main {
@@ -66,12 +69,23 @@
                 margin: 0 !important;
             }
             section {
-                margin-bottom: 2rem !important;
+                margin-bottom: 1.5rem !important;
                 page-break-inside: avoid;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 1rem;
+            }
+            #home {
+                flex-direction: row !important;
+                display: flex !important;
+                align-items: flex-start !important;
+                border-bottom: 2px solid #000;
+            }
+            #home div:first-child {
+                text-align: left !important;
             }
             .glass {
                 background: none !important;
-                border: 1px solid #eee !important;
+                border: none !important;
                 backdrop-filter: none !important;
                 -webkit-backdrop-filter: none !important;
                 color: black !important;
@@ -87,14 +101,17 @@
                 color: black !important;
                 text-shadow: none !important;
             }
+            h1 { font-size: 24pt !important; }
+            h2 { font-size: 18pt !important; margin-top: 1rem !important; }
+            h3 { font-size: 14pt !important; }
             .text-slate-400, 
             .text-slate-500,
             .text-slate-300 {
-                color: #444 !important;
+                color: #222 !important;
             }
             .text-cyan-400,
             .text-cyan-500 {
-                color: #007791 !important;
+                color: #000 !important;
                 font-weight: bold !important;
             }
             .bg-slate-950,
@@ -104,27 +121,40 @@
             }
             img {
                 filter: grayscale(1) !important;
-                max-height: 250px !important;
-                object-fit: contain !important;
+                max-height: 150px !important;
+                width: auto !important;
+                border-radius: 10px !important;
             }
             .border-white\/5,
             .border-white\/10 {
-                border-color: #ddd !important;
+                border-color: #eee !important;
             }
             a {
-                text-decoration: none !important;
+                text-decoration: underline !important;
                 color: black !important;
             }
             a[href^="http"]:after {
-                content: " (" attr(href) ")";
-                font-size: 0.8rem;
-                color: #666;
+                content: " [" attr(href) "]";
+                font-size: 9pt;
+                color: #555;
+                word-break: break-all;
             }
-            a[href^="#"]:after {
-                content: "";
+            .grid {
+                display: block !important;
             }
-            form {
-                display: none !important;
+            .grid-cols-1, .grid-cols-2, .grid-cols-4, .lg\:grid-cols-3, .lg\:grid-cols-4 {
+                display: block !important;
+            }
+            #skills .grid {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 10px !important;
+            }
+            #skills .rounded-3xl {
+                padding: 10px !important;
+                margin-bottom: 5px !important;
+                border: 1px solid #ddd !important;
+                width: 48% !important;
             }
         }
     </style>

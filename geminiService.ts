@@ -1,21 +1,17 @@
-
 import { GoogleGenAI } from "@google/genai";
 import { globalData } from "./data";
 import { Language } from "./types";
 
+// Always initialize the client using the API_KEY from the environment variable process.env.API_KEY.
+// Assume this variable is pre-configured and accessible in the execution context.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
+/**
+ * Provides AI assistance by querying the Gemini model with user context.
+ * Adheres to the latest @google/genai coding guidelines.
+ */
 export const getAIAssistance = async (query: string, lang: Language = 'en') => {
-  // Check if we are in a browser environment without a backend-injected API key
-  const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : null;
-
-  if (!apiKey) {
-    console.error("Gemini API Key missing. This is expected on static hosts like GitHub Pages unless configured with a proxy.");
-    return lang === 'en' 
-      ? "I'm currently in 'Offline Mode'. To enable my AI capabilities on a public host, an API gateway is required. You can reach Hamid directly via the contact section!"
-      : "أنا حالياً في 'وضع عدم الاتصال'. لتفعيل قدرات الذكاء الاصطناعي على استضافة عامة، يلزم وجود بوابة برمجية. يمكنك التواصل مع حامد مباشرة عبر قسم الاتصال!";
-  }
-
   try {
-    const ai = new GoogleGenAI({ apiKey });
     const profile = globalData.content[lang];
     
     const context = `
@@ -34,19 +30,24 @@ export const getAIAssistance = async (query: string, lang: Language = 'en') => {
       - If you don't know an answer, suggest emailing Hamid at ${globalData.email}.
     `;
 
+    // Use ai.models.generateContent directly with model name and prompt.
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: query,
       config: {
         systemInstruction: context,
         temperature: 0.7,
+        // When setting maxOutputTokens, a corresponding thinkingBudget must be set for Gemini 3 series models.
         maxOutputTokens: 500,
+        thinkingConfig: { thinkingBudget: 250 },
       },
     });
 
+    // Directly access the .text property of GenerateContentResponse (do not use text()).
     return response.text;
   } catch (error: any) {
     console.error("Gemini Error:", error);
+    // Robust error handling for rate limits and processing issues.
     if (error.message?.includes("429")) {
       return lang === 'en' ? "System busy. Please try again in a moment." : "النظام مشغول. يرجى المحاولة مرة أخرى بعد قليل.";
     }

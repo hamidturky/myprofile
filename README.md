@@ -1,5 +1,5 @@
 
-# Elevate - Professional AI-Powered Portfolio
+# Personal AI-Powered Portfolio
 
 A world-class digital profile for **Hamid Idris Mussa**, Information Security Architect.
 

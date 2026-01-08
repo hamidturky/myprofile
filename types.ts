@@ -1,4 +1,3 @@
-
 export type Language = 'en' | 'ar';
 
 export interface Project {
@@ -25,6 +24,7 @@ export interface Experience {
   role: string;
   period: string;
   description: string[];
+  tags: string[]; // Added tags for filtering
 }
 
 export interface BlogPost {

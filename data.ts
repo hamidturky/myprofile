@@ -1,4 +1,3 @@
-
 import { GlobalData } from './types';
 
 export const globalData: GlobalData = {
@@ -17,7 +16,7 @@ export const globalData: GlobalData = {
       title: "Information Security Architect | IT Systems Specialist",
       bio: "Master's graduate in Computer Systems Information Security from ITMO University. Expert in risk assessment, network security, and incident response with a proven track record in both academic and freelance technical environments.",
       location: "Al Rayyan, Qatar",
-      avatarUrl: "./profile.png",
+      avatarUrl: "./profile.png&w=800&auto=format&fit=crop",
       skills: [
         { category: "Security", items: ["Network Security", "Vulnerability Assessment", "Risk Analysis", "Web Security", "Incident Response"] },
         { category: "Systems & DevOps", items: ["Linux", "Windows Server", "VMware", "Virtualization", "Docker", "Git"] },
@@ -30,6 +29,7 @@ export const globalData: GlobalData = {
           company: "Eritrea Institute of Technology",
           role: "Graduate Assistant",
           period: "Oct 2015 - Sep 2019",
+          tags: ["IT Specialist", "Information Security Architect"],
           description: [
             "Delivered academic support to 50+ students per semester, achieving a 30% increase in success rates.",
             "Instructed courses in Introduction to Computer Science (Python) and Hardware Maintenance.",
@@ -42,6 +42,7 @@ export const globalData: GlobalData = {
           company: "Freelance Technical Consultant",
           role: "IT Specialist & Developer",
           period: "Sep 2012 - Present",
+          tags: ["IT Specialist"],
           description: [
             "Architected and deployed four professional websites using WordPress and modern web frameworks.",
             "Developed a bespoke ID-generating database system for the Chemical Engineering community.",
@@ -54,6 +55,7 @@ export const globalData: GlobalData = {
           company: "Ghindae Secondary School",
           role: "Math Teacher",
           period: "Sep 2014 - Sep 2015",
+          tags: [],
           description: [
             "Taught advanced Mathematics to Grade 9 students following national curriculum standards.",
             "Integrated modern teaching methodologies to enhance student engagement and performance."
@@ -121,7 +123,7 @@ export const globalData: GlobalData = {
       title: "مهندس معماري لأمن المعلومات | أخصائي نظم تقنية المعلومات",
       bio: "خريج ماجستير في أمن معلومات أنظمة الكمبيوتر من جامعة ITMO. خبير في تقييم المخاطر، أمن الشبكات، والاستجابة للحوادث مع سجل حافل في البيئات الأكاديمية والتقنية المستقلة.",
       location: "الريان، قطر",
-      avatarUrl: "./profile.png",
+      avatarUrl: "profile.png",
       skills: [
         { category: "الأمن", items: ["أمن الشبكات", "تقييم الضعف", "تحليل المخاطر", "أمن الويب", "الاستجابة للحوادث"] },
         { category: "الأنظمة و DevOps", items: ["لينكس", "ويندوز سيرفر", "VMware", "الافتراضية", "دوكر", "جيت"] },
@@ -134,6 +136,7 @@ export const globalData: GlobalData = {
           company: "معهد إريتريا للتكنولوجيا",
           role: "مساعد خريج",
           period: "أكتوبر 2015 - سبتمبر 2019",
+          tags: ["IT Specialist", "Information Security Architect"],
           description: [
             "تقديم الدعم الأكاديمي لأكثر من 50 طالباً في الفصل الدراسي الواحد.",
             "تدريس دورات في مقدمة علوم الكمبيوتر (بايثون) وصيانة الأجهزة.",
@@ -146,6 +149,7 @@ export const globalData: GlobalData = {
           company: "مستشار تقني مستقل",
           role: "أخصائي تقنية معلومات ومطور",
           period: "سبتمبر 2012 - الحاضر",
+          tags: ["IT Specialist"],
           description: [
             "تصميم ونشر أربعة مواقع احترافية باستخدام ووردبريس وأطر الويب الحديثة.",
             "تطوير نظام قاعدة بيانات مخصص لتوليد الهويات لمجتمع الهندسة الكيميائية.",
@@ -158,6 +162,7 @@ export const globalData: GlobalData = {
           company: "مدرسة غيندا الثانوية",
           role: "مدرس رياضيات",
           period: "سبتمبر 2014 - سبتمبر 2015",
+          tags: [],
           description: [
             "تدريس الرياضيات المتقدمة لطلاب الصف التاسع وفقاً للمعايير الوطنية.",
             "دمج منهجيات التدريس الحديثة لتعزيز مشاركة الطلاب وأدائهم."

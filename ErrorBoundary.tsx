@@ -1,8 +1,9 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+import React, { ErrorInfo } from 'react';
 import { ShieldAlert, RefreshCcw, HardDrive } from 'lucide-react';
 
 interface Props {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 interface State {
@@ -10,7 +11,8 @@ interface State {
   error: Error | null;
 }
 
-export class ErrorBoundary extends Component<Props, State> {
+// Fixed: Explicitly using React.Component to ensure 'props' is correctly typed from the base class.
+export class ErrorBoundary extends React.Component<Props, State> {
   public state: State = {
     hasError: false,
     error: null
@@ -67,7 +69,7 @@ export class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-    // Fixed: In React class components, children are accessed via this.props.children, not this.children.
+    // Fixed: Accessing children via this.props which is defined by extending React.Component<Props, State>.
     return this.props.children;
   }
 }

@@ -91,14 +91,28 @@ export const globalData: GlobalData = {
           name: "M.Sc. Computer Systems Information Security",
           issuer: "ITMO University, Russia",
           date: "Jun 2022",
-          imageUrl: "https://images.unsplash.com/photo-152305085306e-88e4f6e082ee?q=80&w=400&auto=format&fit=crop"
+          imageUrl: "./MSc diploma.png"
         },
         {
           id: "c2",
           name: "B.Sc. Computer Science",
           issuer: "Eritrea Institute of Technology",
           date: "Jun 2014",
-          imageUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=400&auto=format&fit=crop"
+          imageUrl: "./Hamid_Bachelor's Diploma.JPG"
+        },
+        {
+          id: "c3",
+          name: "Congress of Young Scientists (КМУ) Participation",
+          issuer: "ITMO University",
+          date: "Not specified",
+          imageUrl: "./KMU Conference participation certificate.png"
+        },
+        {
+          id: "c4",
+          name: "Jury Member - II Open International Olympiad in Informatics",
+          issuer: "Ministry of Education of Turkmenistan & Yagshygeldi Kakayev International Oil and Gas University",
+          date: "Apr 2024",
+          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.JPG"
         }
       ],
       blog: [
@@ -198,14 +212,28 @@ export const globalData: GlobalData = {
           name: "ماجستير في أمن معلومات أنظمة الكمبيوتر",
           issuer: "جامعة ITMO، روسيا",
           date: "يونيو 2022",
-          imageUrl: "https://images.unsplash.com/photo-152305085306e-88e4f6e082ee?q=80&w=400&auto=format&fit=crop"
+          imageUrl: "./MSc diploma.png"
         },
         {
           id: "c2",
           name: "بكالوريوس في علوم الكمبيوتر",
           issuer: "معهد إريتريا للتكنولوجيا",
           date: "يونيو 2014",
-          imageUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=400&auto=format&fit=crop"
+          imageUrl: "./Hamid_Bachelor's Diploma.JPG"
+        },
+        {
+          id: "c3",
+          name: "شهادة مشاركة في مؤتمر العلماء الشباب (КМУ)",
+          issuer: "جامعة ITMO",
+          date: "غير محدد",
+          imageUrl: "./KMU Conference participation certificate.png"
+        },
+        {
+          id: "c4",
+          name: "عضو لجنة التحكيم - الأولمبياد الدولي المفتوح الثاني للمعلوماتية",
+          issuer: "وزارة التعليم في تركمانستان وجامعة ياغشيغلدي كاكاييف الدولية للنفط والغاز",
+          date: "أبريل 2024",
+          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.JPG"
         }
       ],
       blog: [

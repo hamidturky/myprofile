@@ -104,7 +104,7 @@ export const globalData: GlobalData = {
           id: "c3",
           name: "Congress of Young Scientists (КМУ) Participation",
           issuer: "ITMO University",
-          date: "Not specified",
+          date: "April 2025",
           imageUrl: "./KMU Conference participation certificate.png"
         },
         {
@@ -112,7 +112,7 @@ export const globalData: GlobalData = {
           name: "Jury Member - II Open International Olympiad in Informatics",
           issuer: "Ministry of Education of Turkmenistan & Yagshygeldi Kakayev International Oil and Gas University",
           date: "Apr 2024",
-          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.JPG"
+          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.jpg"
         }
       ],
       blog: [
@@ -225,7 +225,7 @@ export const globalData: GlobalData = {
           id: "c3",
           name: "شهادة مشاركة في مؤتمر العلماء الشباب (КМУ)",
           issuer: "جامعة ITMO",
-          date: "غير محدد",
+          date: "أبريل 2025",
           imageUrl: "./KMU Conference participation certificate.png"
         },
         {
@@ -233,7 +233,7 @@ export const globalData: GlobalData = {
           name: "عضو لجنة التحكيم - الأولمبياد الدولي المفتوح الثاني للمعلوماتية",
           issuer: "وزارة التعليم في تركمانستان وجامعة ياغشيغلدي كاكاييف الدولية للنفط والغاز",
           date: "أبريل 2024",
-          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.JPG"
+          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.jpg"
         }
       ],
       blog: [

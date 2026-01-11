@@ -112,7 +112,7 @@ export const globalData: GlobalData = {
           name: "Jury Member - II Open International Olympiad in Informatics",
           issuer: "Ministry of Education of Turkmenistan & Yagshygeldi Kakayev International Oil and Gas University",
           date: "Apr 2024",
-          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.jpg"
+          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.JPG"
         }
       ],
       blog: [
@@ -233,7 +233,7 @@ export const globalData: GlobalData = {
           name: "عضو لجنة التحكيم - الأولمبياد الدولي المفتوح الثاني للمعلوماتية",
           issuer: "وزارة التعليم في تركمانستان وجامعة ياغشيغلدي كاكاييف الدولية للنفط والغاز",
           date: "أبريل 2024",
-          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.jpg"
+          imageUrl: "./Mussa_Hamid_Idris_Jury_certificate.JPG"
         }
       ],
       blog: [

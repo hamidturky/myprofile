@@ -254,7 +254,7 @@ const AppContent: React.FC = () => {
       sent: 'Inquiry Sent Successfully!',
       assistantName: 'Hamid\'s Career Bot',
       activeSystem: 'Operational',
-      aiGreeting: "I'm Hamid's dedicated AI assistant. I can answer questions about his M.Sc. thesis, his IT skills, or how to hire him.",
+      aiGreeting: "I'm Hamid's dedicated AI assistant. I can answer questions about his education and career background, his IT skills, or how to hire him.",
       enterQuery: 'Ask anything about my career...',
       copyLink: 'Copy URL',
       home: 'Home',

@@ -14,7 +14,7 @@ export const globalData: GlobalData = {
     en: {
       name: "Hamid Idris Mussa",
       title: "Information Security Architect | IT Systems Specialist",
-      bio: "Master's graduate in Computer Systems Information Security from ITMO University. Expert in risk assessment, network security, and incident response with a proven track record in both academic and freelance technical environments.",
+      bio: "Master's graduate in Computer Systems Information Security from ITMO University. Skilled in risk assessment, network security, and incident response, with a strong background in both academic and freelance technical support.",
       location: "Al Rayyan, Qatar",
       avatarUrl: "./profile.png&w=800&auto=format&fit=crop",
       skills: [
@@ -31,7 +31,7 @@ export const globalData: GlobalData = {
           period: "Oct 2015 - Sep 2019",
           tags: ["IT Specialist", "Information Security Architect"],
           description: [
-            "Delivered academic support to 50+ students per semester, achieving a 30% increase in success rates.",
+            "Provided academic support to over 50 students each semester, leading to improved understanding and success in their coursework.",
             "Instructed courses in Introduction to Computer Science (Python) and Hardware Maintenance.",
             "Managed hardware/software installations and troubleshooting for faculty and students.",
             "Handled critical administrative tasks including student documentation and academic record management."
@@ -44,7 +44,7 @@ export const globalData: GlobalData = {
           period: "Sep 2012 - Present",
           tags: ["IT Specialist"],
           description: [
-            "Architected and deployed four professional websites using WordPress and modern web frameworks.",
+            "Designed and deployed four professional websites using WordPress and modern web frameworks.",
             "Developed a bespoke ID-generating database system for the Chemical Engineering community.",
             "Diagnosed and resolved complex hardware/software issues for a diverse client base.",
             "Provided ongoing maintenance and optimization for distributed small-business networks."
@@ -134,8 +134,8 @@ export const globalData: GlobalData = {
     },
     ar: {
       name: "حامد إدريس موسى",
-      title: "خبير أمن المعلومات وهندسة النظم",
-      bio: "حاصل على درجة الماجستير في أمن أنظمة الكمبيوتر من جامعة ITMO. متخصص في تقييم المخاطر وأمن الشبكات والاستجابة للحوادث، مع خبرة مثبتة في البيئات الأكاديمية والعمل الحر.",
+      title: "مهندس أمن معلومات | أخصائي نظم تقنية المعلومات",
+      bio: "خريج ماجستير في أمن نظم المعلومات الحاسوبية من جامعة ITMO. لدي خبرة في تقييم المخاطر، أمن الشبكات، والاستجابة للحوادث، مع خلفية قوية في الدعم التقني الأكاديمي والحر.",
       location: "الريان، قطر",
       avatarUrl: "profile.png",
       skills: [
@@ -152,7 +152,7 @@ export const globalData: GlobalData = {
           period: "أكتوبر 2015 - سبتمبر 2019",
           tags: ["IT Specialist", "Information Security Architect"],
           description: [
-            "تقديم الدعم الأكاديمي لأكثر من 50 طالباً في الفصل الدراسي الواحد.",
+            "تقديم الدعم الأكاديمي لأكثر من 50 طالباً كل فصل دراسي، مما أدى إلى تحسين فهمهم ونجاحهم في مقرراتهم الدراسية.",
             "تدريس دورات في مقدمة علوم الكمبيوتر (بايثون) وصيانة الأجهزة.",
             "إدارة تركيبات الأجهزة والبرامج واستكشاف الأخطاء وإصلاحها.",
             "التعامل مع المهام الإدارية الحرجة بما في ذلك توثيق الطلاب."
